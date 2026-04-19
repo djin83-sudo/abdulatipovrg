@@ -1,0 +1,15 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^page/([a-zA-Z0-9_-]+)/?$ index.php?route=page&slug=$1 [QSA,L]
+RewriteRule ^news/([a-zA-Z0-9_-]+)/?$ index.php?route=news&slug=$1 [QSA,L]
+RewriteRule ^news/?$ index.php?route=news [QSA,L]
+RewriteRule ^gallery/?$ index.php?route=gallery [QSA,L]
+RewriteRule ^gallery/([0-9]+)/?$ index.php?route=gallery&album=$1 [QSA,L]
+RewriteRule ^video/?$ index.php?route=video [QSA,L]
+RewriteRule ^contacts/?$ index.php?route=contacts [QSA,L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin.php
+Disallow: /install.php
+Disallow: /uploads/
+Disallow: /config.php
+Disallow: /database.sqlite
+
+Sitemap: /sitemap.xml
